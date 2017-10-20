@@ -29,14 +29,11 @@ homepage: https://github.com/ocharles/prometheus-effect
 library
   exposed-modules:     Prometheus
                        Prometheus.GHC
-                       Network.Wai.Middleware.Prometheus
   build-depends:       base >=4.9 && <4.11
                      , bytestring
                      , clock
                      , hashable >= 1.2.4.0
-                     , http-streams
                      , http-types >= 0.9.1
-                     , io-streams
                      , mtl
                      , retry
                      , safe-exceptions
@@ -75,7 +72,6 @@ test-suite weight
 benchmark benchmarks
   hs-source-dirs:      bench
   build-depends:       base
-                     , weigh
                      , criterion
                      , prometheus-effect
                      , text
